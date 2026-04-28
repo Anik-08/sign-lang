@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { getWordSuggestions, isValidWord, WordSuggestion } from '../lib/wordDictionary' 
 
-const WS_URL = 'ws://localhost:8000/ws/predict'
+const WS_URL = process.env.NEXT_PUBLIC_WS_URL!
 const CONFIDENCE_THRESHOLD = 0.85
 const SMOOTHING_WINDOW = 5
 
